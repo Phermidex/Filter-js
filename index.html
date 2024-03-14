@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div id="filter-js"></div>
+  <div class="container filtable">
+    <article class="item-filtable">
+      <h1>eSolar Events</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto consequatur delectus ipsa voluptas magni? Esse, maiores itaque velit consectetur nobis saepe et placeat corrupti, quis dolor soluta ullam nulla officiis.</p>
+      <span>Out of stock</span>
+      <a href="https://search.yahoo.com/search?fr=mcafee&type=E210US714G0&p=QA">Request Ticket</a>
+    </article>
+
+    <article class="item-filtable">
+      <h1>eCar Events</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt blanditiis assumenda temporibus sequi fugiat soluta ad doloremque, nemo cumque voluptatibus quas! Esse molestiae doloremque fugiat laudantium rem eos porro maiores.</p>
+      <span>In stock</span>
+      <a href="https://search.yahoo.com/search?fr=mcafee&type=E210US714G0&p=QA">Open Ticket</a>
+    </article>
+
+    <article class="item-filtable">
+      <h1>eSolar Events (Pro)</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto consequatur delectus ipsa voluptas magni? Esse, maiores itaque velit consectetur nobis saepe et placeat corrupti, quis dolor soluta ullam nulla officiis.</p>
+      <span>Out of stock</span>
+      <a href="https://search.yahoo.com/search?fr=mcafee&type=E210US714G0&p=QA">Request Ticket</a>
+    </article>
+
+    <article class="item-filtable">
+      <h1>eCar Events (Pro)</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt blanditiis assumenda temporibus sequi fugiat soluta ad doloremque, nemo cumque voluptatibus quas! Esse molestiae doloremque fugiat laudantium rem eos porro maiores.</p>
+      <span>In stock</span>
+      <a href="https://search.yahoo.com/search?fr=mcafee&type=E210US714G0&p=QA">Open Ticket</a>
+    </article>
+
+  </div>
+  <script type="text/javascript" src="/main.js"></script>
+  <script async>
+    const JsFilter = new Filter("filter-js", ".item-filtable", [
+      {
+        label: "Show (all)",
+        action: "show",
+        reference: "all",
+      },
+      {
+        label: "Hide (out of stock)",
+        action: "hide",
+        reference: "out of stock",
+      },
+      {
+        label: "Show (in stock)",
+        action: "hide",
+        reference: "in stock",
+      },
+    ]);
+
+    JsFilter.inizialize();
+    JsFilter.handlerfilter();
+    JsFilter.retoreSelected();
+  </script>
+</body>
+
+</html>
